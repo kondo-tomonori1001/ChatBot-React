@@ -1,80 +1,72 @@
 const defaultDataset = {
   "init": {
       answers: [
-          {content: "仕事を依頼したい", nextId: "job_offer"},
-          {content: "エンジニアのキャリアについて相談したい", nextId: "consultant"},
-          {content: "学習コミュニティについて知りたい", nextId: "community"},
-          {content: "お付き合いしたい", nextId: "dating"},
+          {content: "プロフィールを知りたい！", nextId: "profile"},
+          {content: "どんな勉強をしてるの？", nextId: "study"},
+          {content: "このchatbotについて知りたい！", nextId: "chatbot"},
+          {content: "Twitter、ブログはこちらから〜", nextId: "sns"},
       ],
-      question: "こんにちは！🐯トラハックへのご用件はなんでしょうか？",
+      question: "こんにちは！KONの自己紹介chatbotです。質問を選んでみてください！",
   },
-  "job_offer": {
+  "profile": {
       answers: [
-          {content: "Webサイトを制作してほしい", nextId: "website"},
-          {content: "Webアプリを開発してほしい", nextId: "webapp"},
-          {content: "自動化ツールを作ってほしい", nextId: "automation_tool"},
-          {content: "その他", nextId: "other_jobs"}
+          {content: "現在の職業は？", nextId: "work"},
+          {content: "家族構成は？", nextId: "family"},
+          {content: "エンジニアになる前は何してた？", nextId: "old"},
+          {content: "趣味は？", nextId: "like"}
       ],
-      question: "どのようなお仕事でしょうか？",
+      question: "なにを聞いてみたいですか？",
   },
-  "website": {
+  "work": {
       answers: [
-          {content: "問い合わせる", nextId: "contact"},
+          {content: "さらに詳しく！（問合せフォーム）", nextId: "contact"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "Webサイト細作についてですね。コチラからお問い合わせできます。",
+      question: "地方のWEB制作会社に勤務してます。主にフロントの実装（HTML,CSS,JS）を担当しています。",
   },
-  "webapp": {
+  "family": {
       answers: [
-          {content: "問い合わせる", nextId: "contact"},
+          {content: "さらに詳しく！（問合せフォーム）", nextId: "contact"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "Webアプリ開発についてですね。コチラからお問い合わせできます。",
+      question: "妻と２歳になる双子の娘と４人暮らしです。日々子育てに追われる毎日です。。",
   },
-  "automation_tool": {
+  "old": {
       answers: [
-          {content: "問い合わせる", nextId: "contact"},
+          {content: "さらに詳しく！（問合せフォーム）", nextId: "contact"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "自動化ツール開発についてですね。コチラからお問い合わせできます。",
+      question: "建築学科を卒業して地方公務員（建築技術職）を６年間やっていました。建築士の資格も持ってますよ〜",
   },
-  "other_jobs": {
+  "like": {
       answers: [
-          {content: "問い合わせる", nextId: "contact"},
+        {content: "さらに詳しく！（問合せフォーム）", nextId: "contact"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "その他についてですね。コチラからお問い合わせできます。",
+      question: "キャンプとテニスです！",
   },
-  "consultant": {
+  "study": {
       answers: [
-          {content: "YouTubeで動画を見る", nextId: "https://www.youtube.com/channel/UC-bOAxx-YOsviSmqh8COR0w"},
-          {content: "学習コミュニティについて知りたい", nextId: "community"},
+          {content: "GitHubを覗いてみる", nextId: "https://github.com/kondo-tomonori1001"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "トラハックは普段からYouTubeでキャリアについて発信しています。また、僕が運営するエンジニア向け学習コミュニティ内でも相談に乗っていますよ。",
+      question: "仕事ではVueを使ったりもしますが、Qinへの入国を機にReactを学び始めました〜",
   },
-  "community": {
+  "chatbot": {
       answers: [
-          {content: "どんな活動をしているの？", nextId: "community_activity"},
-          {content: "コミュニティに参加したい", nextId: "https://torahack.web.app/community/"},
+          {content: "GitHubでソースをみる", nextId: "https://github.com/kondo-tomonori1001/ChatBot-React"},
+          {content: "参考にした動画をみる", nextId: "https://www.youtube.com/watch?v=MzJkWO73S70&list=PLX8Rsrpnn3IVOk48awq_nKW0aFP0MGpnn"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "2020年3月から学習コミュニティを始めました！🎉Webエンジニアへの転職を目指す人向けに、プログラミングを教えたりキャリアの相談に乗っています。",
+      question: "React、Material-UIを用いて作成しています！トラハックさんのReact入門講座を参考にしました〜",
   },
-  "community_activity": {
+  "sns": {
       answers: [
-          {content: "さらに詳細を知りたい", nextId: "https://youtu.be/tIzE7hUDbBM"},
-          {content: "コミュニティに参加したい", nextId: "https://torahack.web.app/community/"},
+          {content: "Twitterはこちら", nextId: "https://twitter.com/home?lang=ja"},
+          {content: "運営しているブログはこちら", nextId: "https://code-stock.net/"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "フロントエンド向けの教材の提供、キャリアや勉強法に関するメルマガの配信、週1のオンライン作業会などを開催しています！\n詳細はYouTube動画で紹介しています。",
-  },
-  "dating": {
-      answers: [
-          {content: "DMする", nextId: "https://twitter.com/torahack_"},
-          {content: "最初の質問に戻る", nextId: "init"}
-      ],
-      question: "まずは一緒にランチでもいかがですか？DMしてください😘",
+      question: "日々の学びをアウトプットするためにTwitterとブログを運営しています。",
   },
 }
 
